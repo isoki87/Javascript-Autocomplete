@@ -7,9 +7,21 @@
   <input type="text" id="text box" value="" onkeyup="displayText()">
   <div id="display"></div>
   <script>
+    function autocomplete(text){
+      var textArr = ["a", "aa", "aaa", "aaaa", "aaaaa"];
+      var i;
+      var toReturn = "";
+      for(i = 0; i < textArr.length; i++){
+        if(text == textArr[i] || textArr[i].startsWith(text)){
+          toReturn += textArr[i] + "<br>";
+        }
+      }
+      return toReturn;
+    }
+
     function displayText(){
       var text = document.getElementById("text box").value;
-      document.getElementById("display").innerHTML = text;
+      document.getElementById("display").innerHTML = autocomplete(text);
     }  
   </script>
 <!--I need to keep track of how many characters the user has typed
