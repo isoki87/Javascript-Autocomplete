@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto-Complete Javascript</title>
+</head>
+<body>
+  <input type="text" id="text box" value="" onkeyup="displayText()">
+  <div id="display"></div>
+  <script>
+    function displayText(){
+      var text = document.getElementById("text box").value;
+      document.getElementById("display").innerHTML = text;
+    }  
+  </script>
+<!--I need to keep track of how many characters the user has typed
+//I need to keep track of the character that the user has just typed
+//Have an assorted array ready, have a startFlag and endFlag to keep track of the range of words to display
+
+
+//Just have a div which shows the user's input, and a text box for the user to type in
+//Later, have the autocomplete option in there-->
+</body>
